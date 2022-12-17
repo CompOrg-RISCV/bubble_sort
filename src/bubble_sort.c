@@ -19,12 +19,15 @@ int main(void) {
   uint32_t max_array_size;
   FILE *random_file_ptr, *sorted_file_ptr;
   
+  // Inform user what this program will accomplish
+  printf("This program Bubble Sorts the items in %s file and stores the sorted list in %s\n", RANDOM_NUM_FILE, SORTED_NUM_FILE);
+  
   // open file with the random numbers and load them into the array
   random_file_ptr = fopen(RANDOM_NUM_FILE, "r");
   
   // load random numbers into array
   index = 0;
-  while (fscanf(random_file_ptr,"%d",&array[index]) && (index < MAX_SIZE)) {
+  while ((fscanf(random_file_ptr,"%d",&array[index]) == 1) && (index < MAX_SIZE)) {
     index++;
   }
   // close file that contained the random numbers
