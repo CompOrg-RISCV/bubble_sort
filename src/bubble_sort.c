@@ -2,7 +2,7 @@
 #include "string.h"
 #include "stdlib.h"
 
-#define MAX_SIZE 1000;
+#define MAX_SIZE 1000
 #define RANDOM_NUM_FILE "../src/random_numbers.txt"
 #define SORTED_NUM_FILE "../src/sorted_numbers.txt"
 
