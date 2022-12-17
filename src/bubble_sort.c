@@ -30,6 +30,9 @@ int main(void) {
   // close file that contained the random numbers
   fclose(RANDOM_NUM_FILE);
   
+  // Print sorting in process
+  printf("\nSorting in process ...\n");
+  
   // Bubble sort routine
   for (uint32_t i = 0; i < (index - 1); i++) {
     for (uint32_t j = 0; j < (index - i - 1); j++) {
@@ -46,4 +49,7 @@ int main(void) {
   }
   // close sorted number file
   fclose(SORTED_NUM_FILE);
+  
+  // notify user that the program that the sorting has completed
+  printf("\nSorting has been completed for %d items and saved in the file %s\n", index, SORTED_NUM_FILE);
 }
