@@ -42,6 +42,9 @@ int main(void) {
        if (array[j] > array[j+1]) swap(&array[j+1], &array[j]);
     }
   }
+    
+  // Saving sorted list to file
+  printf("\nSaving sorted list to file ...\n");
   
   // open file to save sorted list
   sorted_file_ptr = fopen(SORTED_NUM_FILE, "w");
