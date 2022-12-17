@@ -28,7 +28,7 @@ int main(void) {
     index++;
   }
   // close file that contained the random numbers
-  fclose(RANDOM_NUM_FILE);
+  fclose(random_file_ptr);
   
   // Print sorting in process
   printf("\nSorting in process ...\n");
@@ -44,11 +44,11 @@ int main(void) {
   sorted_file_ptr = fopen(SORTED_NUM_FILE, "w");
   // save sorted list of numbers
   for (uint32_t i = 0; i < index; i++) {
-    fprintf(SORTED_NUM_FILE, "%d\n", array[i]);
+    fprintf(sorted_file_ptr, "%d\n", array[i]);
     printf("%d\n",array[i]);
   }
   // close sorted number file
-  fclose(SORTED_NUM_FILE);
+  fclose(sorted_file_ptr);
   
   // notify user that the program that the sorting has completed
   printf("\nSorting has been completed for %d items and saved in the file %s\n", index, SORTED_NUM_FILE);
