@@ -1,6 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 #include "stdlib.h"
+#include "stdbool.h"
 
 #define MAX_SIZE 1000
 #define RANDOM_NUM_FILE "../src/random_numbers.txt"
@@ -17,6 +18,7 @@ int main(void) {
   int  array[MAX_SIZE];
   uint32_t index;
   uint32_t max_array_size;
+  bool no_file_open;
   FILE *random_file_ptr, *sorted_file_ptr;
   
   // Inform user what this program will accomplish
@@ -24,7 +26,14 @@ int main(void) {
   
   // open file with the random numbers and load them into the array
   random_file_ptr = fopen(RANDOM_NUM_FILE, "r");
-  
+
+  no_file_open = (random_file_ptr == 0) ? true : false;
+
+  if (no_file_open) {
+    printf("\nNo File found to open. Aborting Bubble Sort.\n");
+    exit(0);
+  }
+
   // load random numbers into array
   index = 0;
   while ((fscanf(random_file_ptr,"%d",&array[index]) == 1) && (index < MAX_SIZE)) {
