@@ -4,8 +4,8 @@
 #include "stdbool.h"
 
 #define MAX_SIZE 1000
-#define RANDOM_NUM_FILE "../src/random_numbers.txt"
-#define SORTED_NUM_FILE "../src/sorted_numbers.txt"
+#define RANDOM_NUM_FILE "/home/project/bubble_sort/src/random_numbers.txt"
+#define SORTED_NUM_FILE "/home/project/bubble_sort/src/sorted_numbers.txt"
 
 void swap(int *swap, int *replace_with) {
   int temp;
