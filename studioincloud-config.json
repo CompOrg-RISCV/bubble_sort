@@ -2,7 +2,7 @@
   "sdkPath": "/home/project/demo_project/work/ia/sdk",
   "iaOrCa": "ia",
   "compileConfigOptions": {
-    "compilerOptimization": "0",
+    "compilerOptimization": "3",
     "debugLevel": "3",
     "noStdLib": false,
     "nostartfiles": false,
